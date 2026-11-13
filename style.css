@@ -55,7 +55,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    flex-wrap: wrap; /* Fixes text being cut off */
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -300,6 +300,205 @@ nav {
     font-size: 20px;
 }
 
+/* --- PRICING SECTION --- */
+.pricing {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.pricing-card {
+    background: var(--light-bg);
+    padding: 40px 30px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.pricing-card.popular {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card.popular h3,
+.pricing-card.popular .price {
+    color: var(--white);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cyan);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--cyan);
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-card.popular .features li {
+    color: #b0c4de;
+}
+
+.features i {
+    color: var(--cyan);
+}
+
+.pricing-card .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-card.popular .btn-secondary {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.pricing-footer {
+    margin-top: 50px;
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* --- HOW IT WORKS (TIMELINE) SECTION --- */
+.how-it-works {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.process-subtitle {
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--navy);
+    color: var(--cyan);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 0 0 8px var(--white);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--cyan);
+}
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--navy);
+}
+
+.timeline-content p {
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
 /* --- PORTFOLIO SECTION --- */
 .portfolio {
     padding: 80px 0;
@@ -330,8 +529,8 @@ nav {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: relative;
     width: 100%;
-    min-width: 0; /* Prevents grid blowout */
-    height: 300px; /* Locks height */
+    min-width: 0;
+    height: 300px;
 }
 
 .portfolio-img-container {
@@ -344,7 +543,6 @@ nav {
     align-items: center;
 }
 
-/* Standard image rule (Project 1 and 3) */
 .portfolio-img-container > img {
     width: 100%;
     height: 100%;
@@ -356,7 +554,6 @@ nav {
     transform: scale(1.1);
 }
 
-/* --- TEXT OVERLAY --- */
 .portfolio-overlay {
     position: absolute;
     top: 0;
@@ -395,7 +592,6 @@ nav {
     margin-bottom: 0;
 }
 
-/* --- CUSTOM MOBILE APP PORTFOLIO STYLE (Project 2) --- */
 .mobile-app-container {
     display: flex;
     justify-content: center;
@@ -532,6 +728,31 @@ footer {
     font-size: 14px;
 }
 
+/* --- FLOATING WHATSAPP BUTTON --- */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    font-size: 35px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-5px);
+    background-color: #1ebe57;
+    color: white;
+}
+
 /* --- RESPONSIVE DESIGN (Mobile) --- */
 @media (max-width: 768px) {
     .nav-links {
@@ -577,172 +798,34 @@ footer {
     .founder-image img {
         margin: 0 auto;
     }
-}
 
-/* --- FLOATING WHATSAPP BUTTON --- */
-.floating-whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366; /* Official WhatsApp Green */
-    color: white;
-    font-size: 35px;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+    
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
 
-.floating-whatsapp:hover {
-    transform: scale(1.1) translateY(-5px);
-    background-color: #1ebe57;
-    color: white;
-}
+    .timeline::before {
+        left: 24px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
 
-/* Responsive tweak for mobile */
-@media (max-width: 768px) {
     .floating-whatsapp {
         bottom: 20px;
         right: 20px;
         width: 55px;
         height: 55px;
         font-size: 30px;
-    }
-}
-}
-
-/* --- PRICING SECTION --- */
-.pricing {
-    padding: 80px 0;
-    background-color: var(--white);
-    text-align: center;
-}
-
-.pricing h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.pricing-subtitle {
-    color: var(--text-light);
-    margin-bottom: 50px;
-    font-size: 18px;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    align-items: center;
-}
-
-.pricing-card {
-    background: var(--light-bg);
-    padding: 40px 30px;
-    border-radius: 10px;
-    position: relative;
-    transition: transform 0.3s ease;
-    border: 1px solid #e0e0e0;
-    text-align: left;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-/* Make the middle card pop out */
-.pricing-card.popular {
-    background: var(--navy);
-    color: var(--white);
-    border: none;
-    transform: scale(1.05);
-}
-
-.pricing-card.popular:hover {
-    transform: scale(1.05) translateY(-10px);
-}
-
-.pricing-card.popular h3,
-.pricing-card.popular .price {
-    color: var(--white);
-}
-
-.badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--cyan);
-    color: var(--white);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.pricing-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.price {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--cyan);
-    margin-bottom: 25px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.features {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.features li {
-    margin-bottom: 15px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.pricing-card.popular .features li {
-    color: #b0c4de;
-}
-
-.features i {
-    color: var(--cyan);
-}
-
-.pricing-card .btn {
-    width: 100%;
-    text-align: center;
-}
-
-.pricing-card.popular .btn-secondary {
-    border-color: var(--white);
-    color: var(--white);
-}
-
-.pricing-footer {
-    margin-top: 50px;
-    color: var(--text-light);
-    font-size: 16px;
-}
-
-/* Mobile Responsiveness for Pricing */
-@media (max-width: 768px) {
-    .pricing-card.popular {
-        transform: scale(1);
-    }
-    .pricing-card.popular:hover {
-        transform: translateY(-10px);
     }
 }
