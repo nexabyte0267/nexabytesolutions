@@ -100,7 +100,7 @@ nav {
     background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* THIS CREATES THE SCROLLING EFFECT */
+    background-attachment: fixed; 
     padding: 150px 0;
     text-align: center;
 }
@@ -109,7 +109,7 @@ nav {
     font-size: 48px;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: var(--white); /* Changed to white for dark background */
+    color: var(--white); 
 }
 
 .hero h1 span {
@@ -118,7 +118,7 @@ nav {
 
 .hero p {
     font-size: 18px;
-    color: #e0e0e0; /* Light grey for readability */
+    color: #e0e0e0; 
     max-width: 700px;
     margin: 0 auto 40px;
 }
@@ -427,6 +427,25 @@ nav {
     margin-top: 50px;
     color: var(--text-light);
     font-size: 16px;
+}
+
+/* --- PRICING CATEGORY TITLES (NEW) --- */
+.pricing-category-title {
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pricing-category-title::before,
+.pricing-category-title::after {
+    content: '';
+    height: 2px;
+    background: #e0e0e0;
+    flex-grow: 1;
 }
 
 /* --- HOW IT WORKS (TIMELINE) SECTION --- */
@@ -784,7 +803,6 @@ footer {
         display: block;
     }
 
-    /* Mobile fix for the background scrolling */
     .hero {
         background-attachment: scroll;
         padding: 100px 0;
