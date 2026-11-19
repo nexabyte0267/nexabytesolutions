@@ -711,80 +711,188 @@ nav {
 
 /* --- CONTACT FORM SECTION --- */
 .contact-section {
-    background: linear-gradient(135deg, var(--navy) 0%, #1a3c5e 100%);
-    padding: 80px 0;
-    text-align: center;
-    color: var(--white);
+    background-color: var(--navy);
+    padding: 100px 0;
 }
 
-.contact-section h2 {
-    color: var(--white);
-    font-size: 36px;
-    margin-bottom: 15px;
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Form slightly wider than info */
+    gap: 60px;
+    align-items: center;
 }
 
-.contact-section p {
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: #b0c4de;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+/* LEFT SIDE: Form Card */
+.contact-form-card {
+    background-color: #0c1f33; /* Slightly lighter than navy to stand out */
+    padding: 45px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: left;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
+    padding: 16px;
+    border: 1px solid #1c354f;
+    border-radius: 8px;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    background-color: var(--white);
-    color: var(--navy);
+    font-size: 15px;
+    background-color: #112a44;
+    color: var(--white);
     outline: none;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #7a92a8;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    box-shadow: 0 0 0 3px var(--cyan);
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 3px rgba(0, 194, 203, 0.2);
 }
 
 .contact-form button {
     width: 100%;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px;
     margin-top: 10px;
+    border-radius: 8px;
 }
 
 /* Formspree Messages */
-.form-success-msg {
+.form-success-msg { color: var(--cyan); font-weight: bold; margin-bottom: 20px; }
+.form-error-msg, .form-error-text { color: #ff4a4a; font-weight: bold; }
+.form-error-text { font-size: 13px; font-weight: normal; display: block; margin-top: 5px; }
+
+
+/* RIGHT SIDE: Contact Info */
+.contact-info-wrapper {
+    text-align: left;
+}
+
+.contact-info-title {
+    color: var(--white);
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--cyan);
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 20px;
+    flex-shrink: 0;
 }
 
-.form-error-msg,
-.form-error-text {
-    color: #ff4a4a;
-    font-weight: bold;
+.info-text {
+    display: flex;
+    flex-direction: column;
 }
 
-.form-error-text {
-    font-size: 14px;
-    font-weight: normal;
+.info-label {
+    font-size: 13px;
+    color: #7a92a8;
+    margin-bottom: 3px;
+}
+
+.info-value {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+a.info-value:hover {
+    color: var(--cyan);
+}
+
+/* WhatsApp Widget */
+.whatsapp-widget {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0, 194, 203, 0.05);
+    border: 1px solid rgba(0, 194, 203, 0.3);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-widget:hover {
+    background-color: rgba(0, 194, 203, 0.1);
+    border-color: var(--cyan);
+    transform: translateY(-2px);
+}
+
+.wa-icon {
+    font-size: 28px;
+    color: var(--cyan);
+}
+
+.wa-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.wa-text strong {
+    color: var(--cyan);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.wa-text span {
+    color: #7a92a8;
+    font-size: 13px;
+}
+
+/* --- RESPONSIVE DESIGN FOR CONTACT (Add to your bottom media query) --- */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .contact-form-card {
+        padding: 30px;
+    }
 }
 
 /* --- FOOTER --- */
