@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="style.css?v=22">
+    <link rel="stylesheet" href="style.css?v=23">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -66,7 +66,6 @@
     <header>
         <div class="container">
             <nav>
-                
                 <div class="logo">
                     <img src="logo.png" alt="NexaByte Logo" height="40">
                     NexaByte <span>Solutions</span>
@@ -81,9 +80,13 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
 
-                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <!-- New Header CTA Button -->
+                <a href="https://wa.me/233548463340" target="_blank" class="btn btn-primary header-cta">Get a Quote</a>
+
+                <!-- Updated to a button for accessibility -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -121,7 +124,7 @@
                 
                 <p>He founded NexaByte Solutions with a clear vision: to help local businesses in Ghana establish a powerful, professional digital presence. Whether it's building a custom mobile app or fixing a Windows OS issue, Emmanuel ensures every client receives top-tier service and practical solutions.</p>
                 
-                <a href="https://wa.me/233548463340" target="_blank" class="btn btn-primary" style="margin-top: 15px;">Chat with Emmanuel</a>
+                <a href="https://wa.me/233548463340" target="_blank" class="btn btn-primary mt-15">Chat with Emmanuel</a>
             </div>
         </div>
     </section>
@@ -215,7 +218,7 @@
             </div>
 
             <!-- SECTION 2: MOBILE APPS -->
-            <h3 class="pricing-category-title" style="margin-top: 60px;">2. Mobile Apps</h3>
+            <h3 class="pricing-category-title mt-60">2. Mobile Apps</h3>
             <div class="pricing-grid">
                 
                 <!-- Simple App -->
@@ -262,22 +265,22 @@
             </div>
 
             <!-- SECTION 3: DESIGN & IT SUPPORT -->
-            <h3 class="pricing-category-title" style="margin-top: 60px;">3. Design & IT Support</h3>
-            <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <h3 class="pricing-category-title mt-60">3. Design & IT Support</h3>
+            <div class="pricing-grid custom-grid">
                 
                 <!-- Design Services -->
-                <div class="pricing-card" style="text-align: left;">
-                    <h3><i class="fas fa-paint-brush" style="color: var(--cyan); margin-right: 10px;"></i> Design Services</h3>
-                    <ul class="features" style="margin-top: 20px;">
+                <div class="pricing-card text-left">
+                    <h3><i class="fas fa-paint-brush icon-cyan"></i> Design Services</h3>
+                    <ul class="features mt-20">
                         <li><i class="fas fa-check"></i> Logo & Flyer: <strong>GHS 100 - 200</strong></li>
                         <li><i class="fas fa-check"></i> Full Branding Package: <strong>GHS 1,200 - 2,500</strong></li>
                     </ul>
                 </div>
 
                 <!-- IT Support -->
-                <div class="pricing-card" style="text-align: left;">
-                    <h3><i class="fas fa-tools" style="color: var(--cyan); margin-right: 10px;"></i> IT Support</h3>
-                    <ul class="features" style="margin-top: 20px;">
+                <div class="pricing-card text-left">
+                    <h3><i class="fas fa-tools icon-cyan"></i> IT Support</h3>
+                    <ul class="features mt-20">
                         <li><i class="fas fa-check"></i> OS Installation (iOS, Windows, Linux): <strong>GHS 150 - 300</strong></li>
                         <li><i class="fas fa-check"></i> Virus Removal: <strong>GHS 100 - 250</strong></li>
                     </ul>
@@ -389,24 +392,24 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials" style="padding: 80px 0; background-color: var(--light-bg); text-align: center;">
+    <section class="testimonials">
         <div class="container">
-            <h2 style="font-size: 36px; margin-bottom: 10px;">What Our Clients Say</h2>
-            <p style="color: var(--text-light); margin-bottom: 50px; font-size: 18px;">Don't just take our word for it.</p>
+            <h2>What Our Clients Say</h2>
+            <p class="subtitle">Don't just take our word for it.</p>
             
             <div class="grid-2">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card" style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-left: 4px solid var(--cyan);">
-                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 20px;">"NexaByte Solutions completely transformed our online presence. Emmanuel built us a fast, beautiful website that our customers love. Highly recommended for any business in Ghana!"</p>
-                    <h4 style="margin-bottom: 0;">Kwame Mensah</h4>
-                    <span style="color: var(--cyan); font-size: 14px;">CEO, Accra Retail Ltd</span>
+                <div class="testimonial-card">
+                    <p>"NexaByte Solutions completely transformed our online presence. Emmanuel built us a fast, beautiful website that our customers love. Highly recommended for any business in Ghana!"</p>
+                    <h4>Kwame Mensah</h4>
+                    <span>CEO, Accra Retail Ltd</span>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card" style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; border-left: 4px solid var(--cyan);">
-                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 20px;">"I needed urgent IT support and Windows installation for my office. Emmanuel responded immediately and fixed everything perfectly. Professional, reliable, and very affordable."</p>
-                    <h4 style="margin-bottom: 0;">Sarah Osei</h4>
-                    <span style="color: var(--cyan); font-size: 14px;">Manager, Kumasi Clinic</span>
+                <div class="testimonial-card">
+                    <p>"I needed urgent IT support and Windows installation for my office. Emmanuel responded immediately and fixed everything perfectly. Professional, reliable, and very affordable."</p>
+                    <h4>Sarah Osei</h4>
+                    <span>Manager, Kumasi Clinic</span>
                 </div>
             </div>
         </div>
@@ -465,17 +468,17 @@
             
             <form id="contact-form" action="https://formspree.io/f/mdeaqdzq" method="POST" class="contact-form">
                 
-                <div data-fs-success style="color: #00C2CB; font-weight: bold; margin-bottom: 20px;"></div>
-                <div data-fs-error style="color: #ff4a4a; font-weight: bold; margin-bottom: 20px;"></div>
+                <div data-fs-success class="form-success-msg"></div>
+                <div data-fs-error class="form-error-msg"></div>
 
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Full Name" data-fs-field required>
-                    <span data-fs-error="name" style="color: #ff4a4a; font-size: 14px;"></span>
+                    <span data-fs-error="name" class="form-error-text"></span>
                 </div>
                 
                 <div class="form-group">
                     <input type="email" name="email" placeholder="Your Email Address" data-fs-field required>
-                    <span data-fs-error="email" style="color: #ff4a4a; font-size: 14px;"></span>
+                    <span data-fs-error="email" class="form-error-text"></span>
                 </div>
                 
                 <div class="form-group">
@@ -484,7 +487,7 @@
                 
                 <div class="form-group">
                     <textarea name="message" rows="5" placeholder="Tell us about your project..." data-fs-field required></textarea>
-                    <span data-fs-error="message" style="color: #ff4a4a; font-size: 14px;"></span>
+                    <span data-fs-error="message" class="form-error-text"></span>
                 </div>
                 
                 <button type="submit" class="btn btn-primary" data-fs-submit-btn>Send Message</button>
