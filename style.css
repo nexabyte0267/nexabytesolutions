@@ -96,7 +96,6 @@ nav {
     color: var(--cyan);
 }
 
-/* Header CTA Button */
 .header-cta {
     padding: 10px 20px;
     font-size: 14px;
@@ -113,9 +112,8 @@ nav {
     padding: 0;
 }
 
-/* --- HERO SECTION WITH PARALLAX BACKGROUND --- */
+/* --- HERO SECTION --- */
 .hero {
-    /* Update the URL below to a local image like 'hero-bg.webp' if you download it */
     background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -600,12 +598,6 @@ nav {
     margin-bottom: 10px;
 }
 
-.portfolio-subtitle {
-    color: var(--text-light);
-    margin-bottom: 50px;
-    font-size: 18px;
-}
-
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -717,14 +709,13 @@ nav {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Form slightly wider than info */
+    grid-template-columns: 1.2fr 1fr; 
     gap: 60px;
     align-items: center;
 }
 
-/* LEFT SIDE: Form Card */
 .contact-form-card {
-    background-color: #0c1f33; /* Slightly lighter than navy to stand out */
+    background-color: #0c1f33; 
     padding: 45px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -788,7 +779,6 @@ nav {
 .form-success-msg { color: var(--cyan); font-weight: bold; margin-bottom: 20px; }
 .form-error-msg, .form-error-text { color: #ff4a4a; font-weight: bold; }
 .form-error-text { font-size: 13px; font-weight: normal; display: block; margin-top: 5px; }
-
 
 /* RIGHT SIDE: Contact Info */
 .contact-info-wrapper {
@@ -883,18 +873,6 @@ a.info-value:hover {
     font-size: 13px;
 }
 
-/* --- RESPONSIVE DESIGN FOR CONTACT (Add to your bottom media query) --- */
-@media (max-width: 900px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    
-    .contact-form-card {
-        padding: 30px;
-    }
-}
-
 /* --- FOOTER --- */
 footer {
     background-color: #061b30;
@@ -968,7 +946,18 @@ footer {
     color: white;
 }
 
-/* --- RESPONSIVE DESIGN (Mobile) --- */
+/* --- RESPONSIVE DESIGN (Mobile & Tablet) --- */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .contact-form-card {
+        padding: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -990,7 +979,6 @@ footer {
         display: block;
     }
 
-    /* Hide Header CTA on Mobile to save space */
     .header-cta {
         display: none; 
     }
