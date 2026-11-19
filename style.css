@@ -41,6 +41,14 @@ a {
     margin: 0 auto;
 }
 
+/* --- UTILITY CLASSES --- */
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-60 { margin-top: 60px; }
+.text-left { text-align: left; }
+.custom-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+.icon-cyan { color: var(--cyan); margin-right: 10px; }
+
 /* --- NAVIGATION BAR --- */
 header {
     background-color: var(--white);
@@ -88,15 +96,26 @@ nav {
     color: var(--cyan);
 }
 
+/* Header CTA Button */
+.header-cta {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 .mobile-menu-btn {
     display: none;
     font-size: 24px;
     color: var(--navy);
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 /* --- HERO SECTION WITH PARALLAX BACKGROUND --- */
 .hero {
+    /* Update the URL below to a local image like 'hero-bg.webp' if you download it */
     background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -135,6 +154,7 @@ nav {
 .btn-primary {
     background-color: var(--cyan);
     color: var(--white);
+    border: none;
 }
 
 .btn-primary:hover {
@@ -429,7 +449,6 @@ nav {
     font-size: 16px;
 }
 
-/* --- PRICING CATEGORY TITLES (NEW) --- */
 .pricing-category-title {
     font-size: 26px;
     color: var(--navy);
@@ -525,6 +544,48 @@ nav {
     color: var(--text-light);
     margin-bottom: 0;
     font-size: 16px;
+}
+
+/* --- TESTIMONIALS SECTION --- */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.testimonials .subtitle {
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    border-left: 4px solid var(--cyan);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    margin-bottom: 0;
+}
+
+.testimonial-card span {
+    color: var(--cyan);
+    font-size: 14px;
 }
 
 /* --- PORTFOLIO SECTION --- */
@@ -708,6 +769,24 @@ nav {
     margin-top: 10px;
 }
 
+/* Formspree Messages */
+.form-success-msg {
+    color: var(--cyan);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-error-msg,
+.form-error-text {
+    color: #ff4a4a;
+    font-weight: bold;
+}
+
+.form-error-text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 /* --- FOOTER --- */
 footer {
     background-color: #061b30;
@@ -801,6 +880,11 @@ footer {
 
     .mobile-menu-btn {
         display: block;
+    }
+
+    /* Hide Header CTA on Mobile to save space */
+    .header-cta {
+        display: none; 
     }
 
     .hero {
